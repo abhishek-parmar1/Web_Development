@@ -1,0 +1,13 @@
+PROGRAM CREATED
+--> prog9.py
+    prog10.py
+    prog11.py (main)
+
+Q1> Dictionary refer prog9.py 
+Q2> Dictionar inside dictionary refer prog9.py
+    for keys in a dictionary use : new_dict.keys()
+    return type of keys function is list
+Q4> more functions on dictionary refer prog10.py
+    new_dict['Graphic Era']['Rajat'] = 'Rajat' : create up to       one level if not exist
+    new_dict['Graphic Era']['Rajat']['Year'] = 5 : Error
+

@@ -1,0 +1,25 @@
+PROGRAM CREATED
+--> Hello.py
+    prog1.py
+    prog2.py
+    prog3.py
+    prog4.py
+
+
+Q1> diffference between , and + in python ?
+--> ',' appends space and '+' not appends any space in the string. 
+Q2> elif can work without else
+Q3> string formating is provided in python refer prog2.py.
+Q4> import other files using import keyword then use its variables using '.' operator 
+    example : import spy_chart
+              spy_chat.spy_name
+Q5> to import only one variable of file
+    example : from spy_chat import spy_name
+	      spy_name
+Q6> while loop
+    example : i=0
+              while i<10:
+		i++	
+Q7> for loop
+Q8> use of function and define and declare and call a function
+    refer prog4.py

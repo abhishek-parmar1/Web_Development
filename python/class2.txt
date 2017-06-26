@@ -1,0 +1,18 @@
+PROGRAM CREATED
+--> prog5.py
+    prog6.py
+    prog7.py
+    prog8.py (main program)
+
+Q1> no switch statements in python 
+--> use dictionary instead to implement switch in python
+Q2> no scope of variables in python for if else 
+Q3> to break infinite loop use ctrl + c
+Q4> array = list in python
+    list is also a datatype
+    can store combination of any data type
+    example : new_List = []
+    refer prog6.py
+Q5> full code for list working : prog7.py
+    for more referennce use tutorial point 
+    

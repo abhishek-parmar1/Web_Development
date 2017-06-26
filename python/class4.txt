@@ -1,0 +1,24 @@
+PROGRAM CREATED
+--> prog12.py
+    prog13.py
+    prog14.py
+    prog15.py
+
+Q1> mkdir test-virtual  // make directory
+    cd test-virtual/    // change directory
+    virtualenv test-virtual  // make viirtyal environment
+    source test-virtual/bin/activate  // activate the environment in linux or in windows : Scripts/activate
+    deactivate  // to deactivate the current environment
+    pip install steganography  // to install any library in environment 
+    pip freeze //to check the library installed
+Q2> python package index : for all library 
+    refer to prog12.py
+Q3> datetime library and formating
+    hierarchy : 
+	         datetime : 
+			datetime : 
+				today()
+				strftime()
+    refer prog13.py
+Q4> class : blue print refer program prog14.py
+Q5> encoding and decoding
