@@ -1,0 +1,24 @@
+Programs :
+	   prog16
+	   prog17(apple website)
+	   
+NOTE	:
+1> dispaly:block; 
+	-by default for dic tags
+	-they take whole space whether height and width 		 provided or not
+   display:inline;
+	-by default span and a tags
+	-they take least space accoording to their size
+	-can be in the same line
+   display:inline-block;
+	-they need to have both height and weight
+	-they can be placed in the same line   	
+2> position:relative
+	-relative to its original position
+	-can define top,left,right,bottom then
+   position:absolute
+	-position the element according to user at any place
+	-can define top,left,right,bottom then
+   position:fixed
+	-fixed the position according to the document
+	-doesnot move on scrol

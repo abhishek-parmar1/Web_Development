@@ -1,0 +1,10 @@
+program :
+	  Prog20
+
+NOTE	:
+	-audio tag 
+	-play and pause function
+	-controls and autoplay attributes
+	-array of dom elements returned by jquery selector
+	- single element can be returned by simple js query selector 
+	-font awesome files

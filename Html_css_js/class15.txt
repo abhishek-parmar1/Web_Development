@@ -1,0 +1,10 @@
+program	:
+	 -prog22
+
+NOTE	:
+	 - js arrays
+	    arr = []
+	 - arr.push(1);
+	 - arr[1] // to access
+	 -arr.concat(arr1) // concat two array
+	 - array can be arr = [1,'2','s']

@@ -1,0 +1,13 @@
+normal html tags and css
+
+important websites :
+	1: cssreference.io
+	2: htmlreference.io
+	3: coolors.co
+	4: cdnjs
+
+Notes :
+	1: on inline elements height and width doesn't effect. They take the space according to their content size.
+	2: their is a property with inline-block which will be effected by the width and height.
+	3: rgba(0-255,0-255,0-255,0-1)
+	4: use Dash  website

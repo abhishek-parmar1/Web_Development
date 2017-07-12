@@ -1,0 +1,13 @@
+Prog	:
+	  prog21
+	  
+
+NOTE	:
+		-camelcase variable name used in javascript
+		-snakecase variable name used in python
+		-queryselector never returns array
+		-queryselectorAll returns array
+		-song.paused
+		-song.duration
+		-song.currenttime
+		-setinterval and set timeout

@@ -1,0 +1,19 @@
+NOTE	:
+	-query selector in js
+	 document.querySelector('input')value; 
+	 document.querySelector('#input')value;
+	 document.querySelector('.input')value;  
+	 returns only 1 element not array
+	
+	-set Time out
+	 setTimeout(function(){
+	 console.log(document.querySelector('input').value);
+	 },5000);
+	 set time out wait for defined time and then call the function provided.
+
+	-eventListener in js
+	 var btn = document.querySelector('#input-btn');
+	 btn.addEventListener('click'function() {
+	 alert('you clicke the button ');
+	 });
+	

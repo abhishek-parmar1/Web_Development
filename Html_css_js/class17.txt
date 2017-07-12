@@ -1,0 +1,5 @@
+Program	:
+NOTE	:
+	 -dataset (for search bar in the songs)
+	 -build song details
+	 -always initialize plugins
