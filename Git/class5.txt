@@ -1,0 +1,26 @@
+--> WORKING WITH GIT
+
+1> git config --global user.name "Abhishek" (only fist time)
+2> git config --global user.email    "parmarabhishek.53@gmail.com" (only first time)
+3> create a folder on your computer	
+4> change path on git
+   cd spyChat
+5> git init : to enter the needed folder (only fist time)
+6> git status : to show the all newly created files (red    coloured) but not track the file, it will provide the status    of files eg :- modified with red colour but not      commited
+7> git add index.html : to track the created file 
+8> git commit -m "my very first commits" : to create a version    of the projectwith a message, -m stands for message
+9> git log : list of all the commits with their message in the    recent order
+10>git add '*.txt' OR git add . : to add all the newly created    files to track
+11> git checkout commit_id : to checkout the previous version (first 6 digits of commit_id  is sufficient)
+12>git checkout master : to go back to recent version
+13>git checkout -b new_branch or git branch clean_up :  to create a new branch 
+14>git checkout branch : to go to that branch, git log of all the branches is different from each other
+14>git branch : get list of all branch names	 
+15>git remote add origin https://github.com/try-git/try_git.git : to make link between folder to cloud
+16> git push origin master : to push all the commits to the cloud repisotry
+17>git pull origin master : We can check for changes on our GitHub repository and pull down any new changes by running this
+18>git diff HEAD : Let's take a look at what is different from our last commit by using the git diff command. In this case we want the diff of our most recent commit, which we can refer to using the HEAD pointer.
+19>git reset octofamily/octodog.txt :  unstage files by using the git reset command. Go ahead and remove octofamily/octodog.txt.
+20>git rm '*.txt' : to remove files
+21>git merge clean_up :  when you have to merge your changes from the clean_up branch into the master branch. We're already on the master branch, so we just need to tell Git to merge the clean_up branch into it.
+22>git branch -d clean_up : to delete a branch
