@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css files included -->
+    <link href="custom.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- main container begin -->
+    <div class="container">
+        <!-- nav bar begin -->
+        <div class="nav-bar row">
+            <div class="col-12">
+                <h1 id="heading-style">Zomato Ordering</h1>
+            </div>
+        </div>
+        <!-- nav bar ends -->
+        <!-- restaurant info section begin-->
+        <div class="content">
+            <div class="row">
+                <!-- restaurant 1-->
+                <div class="col-3 item">
+                    <img src="images/1.png" alt="KFC">
+                    <div class="info">
+                        <p class="info-content" id="KFC">KFC</p>
+                    </div>
+                </div>
+                <!-- restaurant 2-->
+                <div class="col-3 item">
+                    <img src="images/2.png" alt="McDonald's">
+                    <div class="info">
+                        <p class="info-content">McDonald's</p>
+                    </div>
+                </div>
+                <!-- restaurant 3-->
+                <div class="col-3 item">
+                    <img src="images/3.png" alt="Domino's">
+                    <div class="info">
+                        <p class="info-content">Domino's</p>
+                    </div>
+                </div>
+                <!-- restaurant 4-->
+                <div class="col-3 item">
+                    <img src="images/4.jpg" alt="Pizza Hut">
+                    <div class="info">
+                        <p class="info-content">Pizza Hut</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- restaurant info section ends-->
+        <!-- restaurant menu section begin-->
+        <div class="menu_buttons">
+            <div class="row">
+                <!-- restaurant 1 menu-->
+                <div class="col-3 menu_item">
+                    <div class="dropdown">
+                      <button onclick="myFunction1()" class="dropbtn1">Menu</button>
+                      <div id="myDropdown1" class="dropdown-content1">
+                          <ul>
+                              <li><input type="checkbox" name="Kfc-0"> Smoky Grilled : rs295 </li>
+                              <li><input type="checkbox" name="Kfc-1"> Duo Bucket Meal : rs399</li>
+                              <li><input type="checkbox" name="Kfc-2"> Zinger Delux : rs230</li>
+                              <li><input type="checkbox" name="Kfc-3"> Cheezy Crunch : 154</li>
+                              <li><input type="checkbox" name="Kfc-4"> Chicken Rockin' : 160</li>
+                              <li><input type="checkbox" name="Kfc-5"> Veg Zinger : 174</li>
+                              <li><input type="checkbox" name="Kfc-6"> Chicken Zinger : 194</li>
+                              <li><input type="checkbox" name="Kfc-7"> Mingles Bucket : 199</li>
+                              <li><input type="checkbox" name="Kfc-8"> Longer : 120</li>
+                              <li><input type="checkbox" name="Kfc-9"> Rice Bowlz : 159</li>
+                              <li><input type="submit" class="create_order1" value="Create Order"></li>
+                          </ul>
+                      </div>
+                    </div>                    
+                </div>
+                <!-- restaurant 2 menu-->
+                <div class="col-3 menu_item">
+                    <div class="dropdown">
+                      <button onclick="myFunction2()" class="dropbtn2">Menu</button>
+                      <div id="myDropdown2" class="dropdown-content2">
+                        <ul>
+                            <li><input type="checkbox" name="Mcd-0"> McAloo Tikki : rs109 </li>
+                            <li><input type="checkbox" name="Mcd-1"> Chicken McGrill : rs119 </li>
+                            <li><input type="checkbox" name="Mcd-2"> McAloo Wrap : rs132 </li>
+                            <li><input type="checkbox" name="Mcd-3"> Grill Chicken Wrap : rs150 </li>
+                            <li><input type="checkbox" name="Mcd-4"> Filet-O-Fish : rs189 </li>
+                            <li><input type="checkbox" name="Mcd-5"> Chicken Maharaja Mac : rs204 </li>
+                            <li><input type="checkbox" name="Mcd-6"> Chicken McNuggets : rs265 </li>
+                            <li><input type="checkbox" name="Mcd-7"> Big Spicy Chicken Wrap : rs244 </li>
+                            <li><input type="checkbox" name="Mcd-8"> Grilled Chicken Royale : rs231 </li>
+                            <li><input type="checkbox" name="Mcd-9"> Hot Cakes : rs114 </li>
+                            <li><input type="submit" value="Create Order" class="create_order2"></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <!-- restaurant 33 menu-->
+                <div class="col-3 menu_item">
+                    <div class="dropdown">
+                      <button onclick="myFunction3()" class="dropbtn3">Menu</button>
+                      <div id="myDropdown3" class="dropdown-content3">
+                        <ul>
+                            <li><input type="checkbox" name="Dp-0"> Chicken Fajita : rs390 </li>
+                            <li><input type="checkbox" name="Dp-1"> Margherita : rs420 </li>
+                            <li><input type="checkbox" name="Dp-2"> Cheese &amp; Tomato : rs290 </li>
+                            <li><input type="checkbox" name="Dp-3"> Cheese &amp; Bbq Chicken : rs430 </li>
+                            <li><input type="checkbox" name="Dp-4"> Chicken Fiest : rs380 </li>
+                            <li><input type="checkbox" name="Dp-5"> Spicy Chicken : rs475 </li>
+                            <li><input type="checkbox" name="Dp-6"> Keema do Pyaaza : rs510 </li>
+                            <li><input type="checkbox" name="Dp-7"> Zesty Chicken : rs510 </li>
+                            <li><input type="checkbox" name="Dp-8"> Non Veg Extravaganza : rs575 </li>
+                            <li><input type="checkbox" name="Dp-9"> Meatzaa : rs57 </li>
+                            <li><input type="submit" value="Create Order" class="create_order3"></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+                <!-- restaurant 4 menu-->
+                <div class="col-3 menu_item">
+                    <div class="dropdown">
+                      <button onclick="myFunction4()" class="dropbtn4">Menu</button>
+                      <div id="myDropdown4" class="dropdown-content4">
+                        <ul>
+                            <li><input type="checkbox" name="Ph-0"> Veggie Supreme : rs490 </li>
+                            <li><input type="checkbox" name="Ph-1"> Chicken Supreme : rs570 </li>
+                            <li><input type="checkbox" name="Ph-2"> Tandoori Paneer : rs460 </li>
+                            <li><input type="checkbox" name="Ph-3"> Chicken Tikka : rs490 </li>
+                            <li><input type="checkbox" name="Ph-4"> Double Cheese : rs370 </li>
+                            <li><input type="checkbox" name="Ph-5"> Chicken N Spicy : rs460 </li>
+                            <li><input type="checkbox" name="Ph-6"> Margherita : rs250 </li>
+                            <li><input type="checkbox" name="Ph-7"> Paneer Overloaded : rs269 </li>
+                            <li><input type="checkbox" name="Ph-8"> Spicy Chicken Overloaded : rs299 </li>
+                            <li><input type="checkbox" name="Ph-9"> Chicken Fajita : rs390 </li>
+                            <li><input type="submit" value="Create Order" class="create_order4"></li>
+                        </ul>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- restaurant menu section ends-->
+        <!-- place order section begin-->
+        <div class="place_order">
+            <button id="order_btn">Place Order</button>
+        </div>
+        <!-- place order section end-->
+        <!-- message section begin-->
+        <div class="footer">
+            <div id="message">
+            </div>
+        </div>
+        <!-- message section end-->
+        <!-- copyright details-->
+        <div class="copyright">
+            <p class="copyright_info">Developed &amp; Designed By &copy; Abhishek Parmar</p>
+        </div>
+    </div>
+    <!-- main container begin -->
+
+    <!-- js files included -->
+    <script  src="jquery-3.2.1.min.js"></script>
+    <script src="custom.js"></script>
+  </body>
+</html>
