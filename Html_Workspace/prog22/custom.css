@@ -1,0 +1,18 @@
+.wrapper{
+    text-align: center;
+}
+.play_btn
+{
+    padding: 10px;
+    font-weight: bolder;
+    border-radius: 10%;
+}
+.song-details-list{
+    background-color: bisque;
+    list-style: none;
+}
+.disp_song{
+    list-style: none;
+}
+.toggle_play{
+}
