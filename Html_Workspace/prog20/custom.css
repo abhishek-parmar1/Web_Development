@@ -1,0 +1,10 @@
+.wrapper{
+    text-align: center;
+}
+.play_btn
+{
+    padding: 10px;
+    font-weight: bolder;
+    border-radius: 10%;
+}
+
