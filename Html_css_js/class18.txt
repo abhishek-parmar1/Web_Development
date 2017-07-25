@@ -1,0 +1,35 @@
+NOTE	:
+	-every thing in js is object.
+	-array is a object with keys 0,1,2,3... where key is already gnerated by default by js.
+	- function is also a object which can store a key value.
+	1>var fn = function(a)
+		{
+			console.log(a);
+		}
+	
+	2>fn('rajat');   O/P:- rajat
+	
+	3>fn.userName = "vijay";
+	  fn.userName   O/P:- vijay
+	-shortcut for if else
+	 1>
+	   function sumAndProduct(num1,num2,whatToReturn)
+	 {
+		if(whatToReturn == "sum")
+		{
+			return num1 + num2;
+		}
+		else if(whatToReturn == "product")
+		{
+			return num1 * num2;
+		}
+	 }
+	 2>
+	    function sumAndProduct(num1,num2,whatToReturn)
+	 {
+		return {
+			'sum' : num1 + num2,
+			'product' : num1 * num2
+		       }[whatToReturn];
+	  }
+	 }

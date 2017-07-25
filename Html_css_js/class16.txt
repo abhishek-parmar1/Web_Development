@@ -2,4 +2,7 @@ Program	:
 	 -prog23
 
 NOTE	:
-	 -code optimization
+	 -code optimization using for loop and, arrays or objects.
+	 -find() function in jquery 
+	  used with jquery only for searching in the selected content, tag, id, class etc.
+	 -we can put any thing inside a object : string,array,int,function.

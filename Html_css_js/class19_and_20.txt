@@ -1,0 +1,14 @@
+NOTE	:
+	-DNS
+	-URL
+	-Server
+	-ip address
+	-Network tab in browser
+	-methods : get and post and delete and put
+	-get send data in url
+	-post send data in the jason format
+	-get and post data is in key value pair.
+	-response and request
+	-status codes
+	-api
+	-apilist.fun

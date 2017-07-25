@@ -1,5 +1,5 @@
 Program	:
 NOTE	:
-	 -dataset (for search bar in the songs)
+	 -datatable (for search bar in the songs)
 	 -build song details
 	 -always initialize plugins
