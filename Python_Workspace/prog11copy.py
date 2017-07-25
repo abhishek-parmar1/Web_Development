@@ -1,17 +1,67 @@
 print "ZOMATO"
+# restaurant dictionary
 restaurant_dict= {
     'Pizza Hut' : {
         'Qwner' : 'Dan and Frank Carney',
         'Restaurant Rating' : 4.1,
          'Food List' : {
-            'Veggie Supreme' : 490
+             'Veggie Supreme' : 490,
+             'Chicken Supreme' : 570,
+             'Tandoori Paneer' : 460,
+             'Chicken Tikka' : 490,
+             'Double Cheese' : 370,
+             'Chicken N Spicy' : 460,
+             'Margherita' : 250,
+             'Paneer Overloaded' : 269,
+             'Spicy Chicken Overloaded' : 299
          }
     },
-    'KFC' : {
-        'Qwner' : 'Colonel Harland Sanders',
+    "Domino's" : {
+        'Qwner' : 'Tom Monaghan',
         'Restaurant Rating' : 4.3,
         'Food List' : {
-            'Longer' : 120
+            'Chicken Fajita' : 390,
+            'Margherita' : 420,
+            'Cheese & Tomato' : 290,
+            'Cheese & Bbq Chicken' : 430,
+            'Chicken Fiest' : 380,
+            'Spicy Chicken' : 475,
+            'Keema do Pyaaza' : 510,
+            'Zesty Chicken ' : 510,
+            'Non Veg Extravaganza' : 575,
+            'Meatzaa' : 575
+        }
+    },
+    "McDonald's" : {
+        'Qwner' : 'Ray Kroc',
+        'Restaurant Rating' : 4.0,
+        'Food List' : {
+            'McAloo Tikki' : 109,
+            'Chicken McGrill' : 119,
+            'McAloo Wrap with Chipotle Sauce' : 132,
+            'Grill Chicken Wrap with Chipotle Sauce ' : 150,
+            'Filet-O-Fish' : 189,
+            'Chicken Maharaja Mac' : 204,
+            'Chicken McNuggets' : 265,
+            'Big Spicy Chicken Wrap' : 244,
+            'Grilled Chicken Royale' : 231,
+            'Hot Cakes (with Syrup & Butter) ' : 114
+        }
+    },
+    'KFC' : {
+        'Qwner' : ' Colonel Harland Sanders',
+        'Restaurant Rating' : 4.7,
+        'Food List' : {
+            'Smoky Grilled or Hot and Crispy' : 295,
+            'Duo Bucket Meal' : 399,
+            'Zinger Delux' : 230,
+            'Cheezy Crunch' : 154,
+            "Chicken Rockin'" : 160,
+            'Veg Zinger' : 174,
+            'Chicken Zinger' : 194,
+            'Mingles Bucket' : 199,
+            'Longer' : 120,
+            'Rice Bowlz' : 159
         }
     }
 }
