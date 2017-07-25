@@ -1,0 +1,28 @@
+Program	:
+	 -prog27
+NOTE	:
+	 -single page application
+	 -creating urls using plugin of angular
+	 -ng-view,config(),$routeProvider
+	 -ajax call is used when we get the data to be displayed  from the backend. but now we dont have backend we are using array of objects.
+		ajax call syntax :- $.ajax('url', {
+						success : function(data) {
+							$scope.restaurants = data;
+							}
+					});
+	 - STEPS:
+		1> include plugin name : angular-route.min.js
+		2> install plugin in the empty array : var testApp = angular.module('testApp', ['ngRoute']); (ngRoute is provided in the blank array)
+		3> create different pages for all the  html pages section.
+		4> create urls for different pages using plugin.
+		5> create different controller sections in different pages.
+		6> use ng-view in the index.html file.
+		7> config the ng-app : $routeProvider angular own variable
+		8> create the urls using this syntax : $routeProvider.when('/', {
+           									 templateUrl : 'pages/loginTemplate.html',
+            									 controller : 'loginController'
+        								});
+		9> run python server using cmmd : python -m SimpleHTTPServer 8000
+		   an ip of 0.0.0.0 created using 8000 port number using this command.
+		10> open index.html in browser using localhost:8000
+		11> use created urls to access the web pages.

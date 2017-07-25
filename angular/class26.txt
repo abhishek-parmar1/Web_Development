@@ -1,0 +1,25 @@
+Program	:	
+	 -prog28
+
+NOTES	:steps
+	 1> include route.min.js and install it by passing in the blank array.
+	 2> ng-view in index.html
+	 3> create different html pages
+	 4> create urls
+	 5> create controllers in html pages and js file
+	 6> pass $location variable in controller function to use it
+	 7> create service to exchange data between the two controllers and pass the service to the controller in which you want to use the data. 
+	 8> add the service variable to the controller either in the $scope or any where else to use it.
+	 9> to create dynamic urls : $routeProvider.when('/engineer/:engineerIndex', {
+           				 templateUrl : 'pages/detailTemplate.html',
+        			     });
+				    - here engineerIndex is a variable. 
+				    - : is used to create the variables in the url.
+	 10> <a href="#!/engineer/{{ $index }}">{{engineer.name}}</a> :- here href contains a dynamic url where {{ $index }} is a variable provided by the the ng-	  	     repeat.
+	 11> testApp.controller('detailController', function($scope,$routeParams,engineersService) {
+    					var engineer_list = engineersService.engineers;
+    					$scope.engineer = engineer_list[$routeParams.engineerIndex];
+				}); 	
+	                        :- here $routeParams contains the variables passed in the url, where engineerIndex is the key and $index is its value.  
+	 12> difference between ng-show and ng-if is that ng-show will give the will not add the html content unless the condition is true and ng-show will add the 	             html whether or not the condition is true or not.
+	 13> showDishDetails() will request the api with the url of the data and then it will return the response in the form of object, which data will be used to 	     print the data on ingredient section page.

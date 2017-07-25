@@ -1,0 +1,19 @@
+Program	:
+	 -Prog26
+
+NOTE	: IMPORTANT NOTES
+	 -architecture of angular
+		MVC : model view controler
+	 -angular with js exapmle prog26
+	 -angular use 2-way data binding : because angular change the data in the controler key if html data change or vice versa.
+	 -digest cycle in angular : a infinte rule in angular to check the data changed in the html or performed the binding or to check data changed in the 	  	  	  controler, if data is changed it will execute the merged data.
+	 -function never use in the controler because it will execute two times but it is not the case with the variables because of binding of variables.
+	 -two times a function call which is defined in the controler : 
+		REASON - because of digest cycle, first html will render the html and perform all the bindings and at the time it will call the function,
+			 then digest cycle will again render the html page to check that the values changed or not and again call the function. Then it will come to 			 know that the data is not changed and it has executed the function again there for function executes two times.
+		CONCLUSION - call variables instead of calling functions directly on the html, use ng-click to call the functions of $scope.
+	 -ng-repeat : for for loop in angular, the tag on which ng-repeat is used it will repeat the whole html with that tag again which contain that ng-repeat.
+	 -always use objects not the variables in the ng-model best practice.
+	 -anything defined in the ng-model is added to the $scope directly in the controller.
+	 -$scope variables can only be used in the html out of all variables defined in the conroller which is defined in js.
+	 -more info in prog26 files.

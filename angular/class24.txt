@@ -1,0 +1,15 @@
+Program	:
+	 AcadviewTest (todo application)
+
+NOTE	:
+	 -todo application created in the AcadviewTest folder
+	 -filter in angular (|) : to solve the problem of the  function execution twice.
+	  example : {{ input1 | function_name : input2 }}
+	 -to search in the content use filter function of angular.
+		filter : function name
+		input to function : (string,array)
+		output of function : (array)
+	 -IMPORTANT : filter can not be used in the ng-model because it take input as string and array and return array but ng-model is holding a variable.
+		    : but this will work :- ng-repeat=" engineer in engineers | filter: query" 
+					    because first (engineers | filter : query) will execute, then remaining expression will execute.
+	 -$index is a variable provided by the angular which will give the index of current location used with ng-repeat.	 

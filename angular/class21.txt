@@ -1,0 +1,10 @@
+PROG	:
+	prog24
+NOTE	:	
+	 -ng-app used in html tag so that angular work on the whole document.
+	 -angular js file included in the head tag.
+	 -steps to use for dynamic data on html : 
+		on the input tag : ng-model="email" . its is used only with the input tags.
+		on the display tag : {{ email }} use this statement where ever you want to print the data of the input tag. this is called binding.
+	 -ng-click="display()" to call any function directly. 
+	 - library and framework

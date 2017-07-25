@@ -1,0 +1,21 @@
+Program	:
+	 -prog25
+NOTe	:
+	 -Web sockets : send data without any request of client, to do that we use web sockets example whats app.
+	 -AJAX : without reloading the page, request the server for data and get response and display it. eg facebook feedback  section.
+	 -when using angular with form, no need to use method and action attribute in the form.
+	 - IMPORTANT IN JASON AND IN OBJECT IN ARRAY	:
+				 -in jason key and value pair must be only be inside the "" quotes only* .
+				 -in object in js key and value can be any thing type.
+				 -jason is only created when the transfer of data occurs otherwise it will be object only.
+	 -novalidate is a attribute in the angular used to disable the  html validation over the user inputs, when we use it in the form it will submit the form with 	  	  out performing the validation of the html eg required etc. example PROG25 --> INDEX1.HTML .
+	 -without the using the nonvalidate example is  PROG25 --> INDEX2.HTML .
+	 -ng-app, ng-model, all these are angular directives.
+	 -ng-disabled = "myForm.$invalid" : if form is invalid disable the button.  
+	 - in angular, tags can be binded by their name defined and can be used to select the data of input tag and can be shown error on the website using $error.
+	 -$error is the private variable in the angular created to be used by the angular not the user.
+	 -if statement and for loop can be used in the html itself using angular.  example ng-if for if statement but their is no else  statement in the angular.
+	 -example PROG25 --> INDEX3.HTML . 
+	 -for animation use : three.js
+			      or their are many such js files that we can use.
+	 -use canvas in html for animation.	
