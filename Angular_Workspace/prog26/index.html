@@ -1,0 +1,34 @@
+<html ng-app="testApp">
+
+<head>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="advanced.js"></script>
+</head>
+
+<body>
+    
+	<div><!-- section for a different controller--></div>
+	
+    <!-- section for mainController-->
+    <!-- ng-controller is used to give a name to section-->
+    <div ng-controller="mainController">
+		<input type="text" ng-model="user.name">
+		<button ng-click="addEngineer(user.name)">
+			Add
+		</button>
+		<h1>Engineers</h1>
+		<ul>
+			<li ng-repeat="engineer in engineers">
+				{{ engineer }}
+				<button ng-click="deleteEngineer(engineer)">	Delete
+				</button>
+			</li>
+		</ul>
+	</div>
+    
+	<div><!-- section for a different controller--></div>
+	<div><!-- section for a different controller--></div>
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ngTodo">
+<head>
+    <meta charset="UTF-8">
+    
+    <link href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <script src="angular.min.js"></script>
+    
+    <style>
+        h1{
+            text-align: center;
+        }
+        div.todo-item{
+            border: 2px solid grey;
+            padding: 5px;
+            padding-left:20px; 
+        }
+        input{
+            margin-right: 20px;
+        }
+        #todo-add-btn{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .todo-item{
+            margin-bottom: 5px;
+        }
+        .search-todo{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div ng-controller="mainController">
+        <input type="text" placeholder="search..." ng-model="query" class="search-todo">
+        <h1>Todays Todo's List</h1>
+        <input type="text" placeholder="Add Todo" required ng-model="newTodo.name" >
+        <input type="text" placeholder="Add Todo Details" required  ng-model="newTodo.details">
+        <br>
+        <button ng-click="addTodo(newTodo)" id="todo-add-btn">Click To Add</button>
+        <div class="todo-item" ng-repeat="todo in todoArray | filter : query">
+            <h3>{{ todo.title + " : "  }}</h3>
+            <p>{{ todo.details}}</p>
+            <button ng-click="removeTodo($index)">Remove&nbsp;<i class="fa fa-trash-o" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

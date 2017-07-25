@@ -1,0 +1,11 @@
+<div ng-controller="detailController">
+    <p>{{engineer.name}}</p>
+    <p>{{engineer.postion}}</p>
+    <p>{{engineer.sex}}</p>
+    <p>{{engineer.age}}</p>
+    
+    <button ng-if="engineer.favouriteDish" 
+            ng-click="showDishDetails(engineer.favouriteDish.url)">
+        Get Favourite Dish's Name
+    </button>
+</div>

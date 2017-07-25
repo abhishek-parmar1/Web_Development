@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <script src="angular.min.js"></script>
+    <style>
+        input.ng-invalid{
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <form name="loginForm">
+			<label for="my-email">Please enter you email</label>
+			<input id="my-email" ng-model="user.email" 
+			type="email" name="myEmail" required>
+        
+			<div ng-if="loginForm.myEmail.$error.required">This is Required</div>
+			<div ng-if="loginForm.myEmail.$error.email">This is not a valid email</div>
+			
+            <label for="my-pass">Please enter your password</label>
+			<input id="my-pass" ng-model="user.pass" 
+			type="text" name="myPass" required ng-minlength="6">
+			<div ng-if="loginForm.myPass.$error.required">This is Required</div>
+			<div ng-if="loginForm.myPass.$error.minlength">must be minlength 6</div>
+
+            <!-- make the submit button disabled untill form is not valid-->
+			<input type="submit" ng-disabled="loginForm.$invalid" name="submit">
+    </form>
+</body>
+</html>
