@@ -1,0 +1,70 @@
+PROGRAM	:
+	 prog29.py
+	 API_access_token.py
+	
+NOTE	:
+	1> difference between library( small component ) and framework( complete all component ) and plugin. Api is set of urls which is used to give request and get data.
+	2> we can not request https from http.
+	3> API limits the access of data of the database.
+	4> my access token for instagram api : https://www.acadview.com/#access_token=1790416525.5ebbe09.a59297985757454f8ff73aa42b7f649d
+	
+	5> STEPS FOR ACCESS TOKEN: (first thing required to access instagarm api is to get access token)
+
+Acadview_Access_token -
+4870715640.a48e759.874aba351e5147eca8a9d36b9688f494
+
+
+Generate Access token to use Instagram API
+
+
+Goto https://instagram.com/developer
+Click on Manage Clients tab in the header.
+
+If not already logged in, login in using your existing instagram account.
+Click on Register a new client, the green colored button just below the header on the right.
+
+Fill out the form with the valid url in the Valid redirect URIs field.
+Ex: www.acadview.com, https://acadview.com, https://www.acadview.com 
+
+
+Click on register.
+
+
+Uncheck the “Disable implicit OAuth” under under the security tab.
+
+
+Copy the client-id.
+
+
+Replace CLIENT-ID and REDIRECT-URI, do not use the url directly, it won’t work. Run this in the browser:
+1. https://api.instagram.com/oauth/authorize/?
+2. client_id=CLIENT-ID
+3. &redirect_uri=REDIRECT-URI
+4. &response_type=token
+5. &scope=basic+public_content+likes+comments
+	
+	Ex: 
+	https://api.instagram.com/oauth/authorize/?
+client_id=1234567890
+&redirect_uri=https://www.acadview.com
+&response_type=token
+&scope=basic+public_content+likes+comments
+
+
+
+
+
+
+You will be redirected to:
+http://your-redirect-uri/#access_token=ACCESS-TOKEN
+
+Ex: https://www.acadview.com#access_token=596179601.03af553.4c01fa27c9014e84940a4ea6f59189af
+
+
+Save the access token from the url in the python file.
+
+	6> you are in the Sandbox mode currently, so you can not request any user details directly, you need to invite the user with the username of instagram from 	   	   sandbox then user will  accept the request and then you can use the User Endpoints and access token to get the user details.
+	7> get user self details.
+	9> add another user to sandbox mode, invite.  
+	8> get another user id by user name.
+	9> get another user details by their id.

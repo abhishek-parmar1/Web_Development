@@ -1,0 +1,12 @@
+PROGRAM	:
+	prog30
+NOTE	:
+	 Q1> get user recent post id
+	 Q2> get user recent post url
+	 Q3> download user recent post image or video
+	steps
+	 1> get user all recent media. 
+	 2> get user first media id.
+	 3> get that media url if video then take it too.
+	 4> install url library
+	 5> url library has a function named retrive, get the post using the function.
