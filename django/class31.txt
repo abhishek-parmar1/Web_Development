@@ -1,0 +1,17 @@
+Program	:
+	 prog32
+NOTE	:
+	 1> Django : follow MVT ( model view template ) which is equivalent to MVC. MVT ( model(data) view(controller) template(view for the user) ).
+	 2> steps to use django (to create an application or project in the django):
+		1- create virtual environment and activate it
+		2- install django : pip install django
+		IMPORTANT : first always create a project than a application inside that
+		IMPORTANT : always open the folder which has file manage.py in the pycharm and use pycharm terminal to run this commands
+		3- create django project : django-admin startproject projectname
+		4- why use django : because of ORM which converts the query of all the databases languages into the a general format which is used by the user datbase.
+		5- then run server of the django : python manage.py runserver 8000 : it is a development server
+			server levels :- level 1 ( python simple http server )
+					 level 2 ( python development server )
+					 level 3 ( production server eg apache or enginex )
+		6- django app and django project is different : a application can not have any projects but a project can have multiple applicatiion.
+		7- to start a app in django : django-admin startapp appname 

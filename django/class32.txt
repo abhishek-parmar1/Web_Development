@@ -1,0 +1,35 @@
+Program	:
+	 prog33
+NOTE	:
+	 1> create app on the side of the project folder (both are sibblings in folder hierarchy).
+	 2> In settings.py add name of the application in the installed apps list.
+	 3> Database concepts : 
+				- referential integrity : you can not delete a primary key row when there is a entry for that the primary key as a foreign key in the 				  	  other table.
+	 4> difference between data and database in the django ( important question )
+	 5> create table in the models.py file in the application folder
+	 6> sql is a language and mysql and oracle and postgras are the databases types
+	 7> by default the database created is mysql but we can change the database type in file code of settings.py in Database dictionary.
+	 8> create table syntax : (in models.py in the application )
+				 class Post(models.Model)
+					title = models.CharField(max_length=255,default=None)
+					description = models.CharField(max_length=255)
+					created_on = models.DateTimeField(auto_now=True)
+					is_active = models.BooleanField(default=false)
+					number = models.IntegerField(default=0)
+				- Table name = Post
+				- title and other fields are columns
+				- Primary key is already append by the django
+				- class Post will inherit the models.Model
+				- max_length is complusary in the CharField
+				- created table name will be Blog_Post , there for we can create as many classes with the same name for differnet applications.
+	 9> when we change the structure of the class and when we first time create the class the commands are :
+	 IMPORTANT : always open the folder which has file manage.py in the pycharm and use pycharm terminal to run this commands
+		1> python manage.py makemigration : to convert the class structure into database query.
+		2> python manage.py migrate : to perform the migrations
+	 10> to insert in the table : python manage.py shell ( run in the project folder )
+	     			      from blog.models import Post
+	     my_post = Post( title = "my name", designation = "bla bla", created_on = datetime.today() )  // create the object of the class and object is converted 												          // into sql data using ORM  
+	     my_post.save()  // to save the data 
+				      
+				
+							  

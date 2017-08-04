@@ -1,0 +1,48 @@
+Program	:
+	 prog33
+NOTE	:
+	 similarly we can create the put and delete api.
+	 IMPORTANT	: comments will guide you in the code.
+	 - create Post API steps :
+		1> in views.py file in  application : 
+
+class CreatePostView(APIView):
+
+    def post(self, request):
+        post_data = request.data
+        title = post_data['title']
+        description = post_data['description']
+
+        post = Post(title=title, description=description)
+
+        try:
+            post.save()
+        except Exception as e:
+            return Response({
+                'message': 'Post was not saved successfully'
+            })
+
+        return Response({
+            'message': "Post Saved Successfully"
+        })
+	
+		2> in urls.py in application
+
+from django.conf.urls import url
+from blog.views import PostListView, CreatePostView
+
+urlpatterns = [
+    url('^list', PostListView.as_view()),
+    url('^create', CreatePostView.as_view())
+]
+
+		3> in urls.py in the project folder
+
+from django.conf.urls import url, include
+from django.contrib import admin
+
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    url(r'^post/', include('blog.urls'))
+]	 
+		

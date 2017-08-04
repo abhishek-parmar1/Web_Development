@@ -1,0 +1,51 @@
+PROGRAM	:
+	 prog33
+NOTE	:
+	   IMPORTANT : always open the folder which has file manage.py in the pycharm and use pycharm terminal to run this commands
+	 - Make APi 
+	   1> Create GET API : steps ( all inside the blog : app name )
+		1> read image.jpg
+		IMPORTANT : comments added in the files created will lead you to importance of each command. 
+		2> create database class, perform migrations
+		3> install library django rest framework : pip install djangorestframework (it will provide the APIView class to inherit by the view in views.py)
+		4> in views.py : 
+				from rest_framework.views import APIView
+				from .models import Post
+				from .serializer import PostSerializer
+				from rest_framework.response import Response
+				
+				class PostListView(APIView):
+				
+					def get(self, request):
+						posts = Post.objects.all()
+						serialized_data = PostSerializer(instance=posts, many=True).data
+						return Response(serialized_data)
+		6> in serializer.py : 
+		   		from rest_framework import serializers
+		   		from .models import Post
+				
+				class PostSerializler(serializers.ModelSerializer):
+					class Meta:
+						model = Post
+						fields = '__all__'
+
+		3> create url : in urls.py
+			from django.conf.urls import url
+			from blog.views import PostListView
+			
+			urlpatterns = [
+					url('^list',PostListView.as_view())
+					]
+		
+		
+		7> in settings.py in main project : 
+			from django.conf.urls import url, include
+			from django.contrib import admin
+	
+			urlpatterns = [
+				url(r'^admin/', admin.site.urls),
+				url(r'^post/', include('blog.urls'))
+					]
+					
+ 				
+			      
