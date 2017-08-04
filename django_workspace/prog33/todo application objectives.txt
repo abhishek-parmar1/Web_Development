@@ -1,0 +1,11 @@
+Django Project ==> ToDoApp
+
+App1 Name ==> ToDo
+Tables ==> ToDo
+	Fields ==> [title, description, created_on, user_fk]
+
+App2 Name ==> Account
+Tables ==> User
+	Fields ==> [user, email, mobile_number, created_on]
+
+Every table should contain at least 2 rows.
