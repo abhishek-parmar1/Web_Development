@@ -1,0 +1,102 @@
+NOTE : Using $resource (ng-resource) in angular.
+
+1> NORMAL METHOD :
+
+angular.module('app')
+  .controller('MainCtrl', function($scope, $http) {
+
+	var user_data=$http.get(" url of api ");
+	
+	user_data.then(function(result){
+		$scope.users=result.data;	
+	});
+
+  });
+
+
+2> METHOD USING $resource
+
+GET REQUEST :-
+
+	1> create service for object of $resource
+	
+	angular.module('app')
+	.factory('UserService', function($resource) {
+		return $resource(' url_of_api/:user ' , {user: '@user'});
+	});
+
+
+	2> call the service and post queries
+
+
+	angular.module('app')
+	  .controller('MainCtrl', function($scope, $UserService) {
+
+		$scope.users=UserService.query(); // for get request to url in service	
+		OR
+		$scope.users=UserService.get();   // for get request to url in service
+
+	  });
+
+	3> for a particular ID data or UserId data
+
+	$scope.setDataForUser = function(userId) {
+		$scope.currentUser = UserService.get({user: userId});
+	};
+
+POST REQUEST :-
+
+	$scope.addUser = function() {
+		UserService.save({name: 'Abhishek', email: 'aa@aa.com'});
+	};
+
+
+Create Your Own Request For Put :
+
+
+	1> create service for object of $resource
+	
+	angular.module('app')
+	.factory('UserService', function($resource) {
+
+		var data = $resource(' url_of_api/:user ' , {user: '@user'}, {
+				update: {
+					method: 'PUT'
+					}
+				});
+
+		return data;
+	});
+
+
+	2> call the service and put queries
+
+
+	angular.module('app')
+	  .controller('MainCtrl', function($scope, $UserService) {
+
+	
+		$scope.addUser = function() {
+				UserService.update({user: 1}, {name: 'Abhishek', email: 'aa@aa.com'}); // data in body of request
+				UserService.update({user: 1, name: 'Abhishek', email: 'aa@aa.com'}, {}); // data in url of request
+			};	
+
+	  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
