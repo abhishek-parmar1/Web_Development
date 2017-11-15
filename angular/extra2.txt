@@ -1,0 +1,108 @@
+HANDLING ASYNCHRONOUS CALLS IN ANGULARJS :
+
+1> 1st METHOD callback and errorCallback functions :
+
+app.contoller('AppCtrl', function($scope, $timeout) {
+
+	function add(x, y, callback, errorCallback) 
+	{
+		$timeout(function() {
+			callback(x+y);
+			},100);
+	}
+	
+	var startTime =Date.now();
+
+  	add(5, 2, function(result) {
+
+		add(result, 3, function(result) {
+
+			add(result, 1, function(result) {
+
+				$scope.result=result;
+				$scope.elapsedTime = Date.now() - startTime;
+
+			}, function(error) { /* handle error */ }
+
+		}, function(error) { /* handle error */ }		
+
+	}, function(error) { /* handle error */ }
+
+});
+
+2> 2nd METHOD Promises and Promises chaining :
+
+NOTE: $timeout by default returns a promsie, so no need to externally create and return a promise.
+	
+
+app.contoller('AppCtrl', function($scope, $timeout) {
+
+	function add(x, y) 
+	{
+		return $timeout(function() {   // return a promise object
+			return x+y;            // value of result in promise object
+			},100);
+	}
+	
+	var startTime =Date.now();
+
+  	add(5, 2)
+	.then(function(result) {
+		return add(result,3);
+	})
+	.then(function(result) {
+		return add(result,1);
+	})
+	.then(function(result) {
+		$scope.result = result;
+		$scope.elapsedTime = Date.now() - startTime;
+	});
+
+});
+
+
+3> 3rd method in angularjs $q used to create our own promises and handle error handling for them :
+
+NOTE : to handle error with individual calls you can use another callback function in then for failure. 
+
+app.contoller('AppCtrl', function($scope, $q) {
+
+	function add(x, y) 
+	{
+		var q = $q.defer();     // create a object of $q for creating a promise
+		
+		setTimeout(function() {
+  
+			var result =x+y;
+			if(result>=0)
+				q.resolve(x+y);  // for successfull result of promise use resolve function 
+			else
+				q.reject("negative result " + result ); // for failure in result use reject         
+
+		},100);
+		
+		return q.promise;       // return promise object
+	}
+	
+	var startTime =Date.now();
+
+  	add(5, 2)
+	.then(function(result) {
+		return add(result,3);
+	})
+	.then(function(result) {
+		return add(result,1);
+	})
+	.then(function(result) {
+		$scope.result = result;
+	})
+	.catch(function(failure) {
+		$scope.failure=failure;
+	})
+	.finally(function() {
+		$scope.elapsedTime = Date.now() - startTime;
+	});
+
+
+});
+
